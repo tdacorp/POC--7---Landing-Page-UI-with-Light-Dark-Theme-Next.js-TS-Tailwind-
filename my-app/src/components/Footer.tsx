@@ -4,11 +4,11 @@ import { Twitter, Facebook, Instagram, Github } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 py-8 px-8">
+    <footer className="bg-gray-100 text-gray-600 py-8 px-8 dark:text-white"style={{ background: "var(--bg)", color: "var(--text)" }}>
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         
         {/* Navigation */}
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 dark:text-white">
           <h3 className="font-bold text-lg">Navigation</h3>
           <a href="/" className="hover:text-white">Home</a>
           <a href="/about" className="hover:text-white">About</a>
@@ -45,7 +45,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-600">
+      <div className="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-600"style={{ background: "var(--bg)", color: "var(--text)" }}>
         &copy; {new Date().getFullYear()} Your Company. All rights reserved.
       </div>
     </footer>

@@ -27,18 +27,18 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-white ">
+    <section className="py-16 bg-white "style={{ background: "var(--bg)", color: "var(--text)" }}>
       <div className="text-center mb-12">
         <h2 className="text-3xl font-semibold">What Our Customers Say</h2>
       </div>
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-4">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-4 ">
         {testimonials.map((t, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow"
+            className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow dark:bg-gray-50 "style={{ background: "var(--bg)", color: "var(--text)" }}
           >
             <h3 className="text-red-600 font-semibold text-lg mb-3">“{t.quote}”</h3>
-            <p className="text-gray-700 mb-4">{t.text}</p>
+            <p className="text-gray-700 mb-4 dark:bg-gray-100 dark:text-white"style={{ background: "var(--bg)", color: "var(--text)" }}>{t.text}</p>
             <div className="flex items-center gap-3 mt-4">
               <div className="w-12 h-12 relative rounded-full overflow-hidden">
                 <Image
@@ -50,7 +50,7 @@ export default function Testimonials() {
               </div>
               <div>
                 <p className="font-bold">{t.name}</p>
-                <p className="text-gray-500 text-sm">{t.location}</p>
+                <p className="text-gray-500 text-sm"style={{ background: "var(--bg)", color: "var(--text)" }}>{t.location}</p>
               </div>
             </div>
           </div>

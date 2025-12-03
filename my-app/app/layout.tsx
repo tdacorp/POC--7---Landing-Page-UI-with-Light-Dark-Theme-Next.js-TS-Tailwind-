@@ -7,6 +7,10 @@ import MenuCards from "@/src/components/MenuCards";
 import Testimonials from "@/src/components/Testimonials";
 import Footer from "@/src/components/Footer";
 
+import { ThemeProvider } from "next-themes";
+import ThemeWrapper from "./ThemeWrapper";
+
+
 
 export default function RootLayout({
   children,
@@ -16,6 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/* <ThemeProvider
+          attribute="class"     // <-- IMPORTANT: adds 'class="dark"' to <html>
+          defaultTheme="light"
+          enableSystem={false}
+        > */}
+        <ThemeWrapper>
         <TopBar />
         <Navbar />
         <Hero />
@@ -23,6 +33,8 @@ export default function RootLayout({
         <Testimonials />
         <Footer />
         {children}
+        {/* </ThemeProvider> */}
+        </ThemeWrapper>
       </body>
     </html>
   );
