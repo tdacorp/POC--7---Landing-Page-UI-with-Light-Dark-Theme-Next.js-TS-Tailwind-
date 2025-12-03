@@ -11,7 +11,7 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center">
         <Image
-          src="/logo.jpg"  // ← replace with your image path
+          src="/logo.png"  // ← replace with your image path
           alt="Bistro Bliss Logo"
           width={50}
           height={50}
