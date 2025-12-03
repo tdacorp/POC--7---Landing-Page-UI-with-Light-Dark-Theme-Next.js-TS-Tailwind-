@@ -1,7 +1,8 @@
+import "./globals.css";
+
 import TopBar from "@/src/components/TopBar";
 import Navbar from "@/src/components/navbar";
-
-import "./globals.css";
+import Hero from "@/src/components/Hero";
 
 
 export default function RootLayout({
@@ -14,6 +15,7 @@ export default function RootLayout({
       <body>
         <TopBar />
         <Navbar />
+        <Hero />
         {children}
       </body>
     </html>
