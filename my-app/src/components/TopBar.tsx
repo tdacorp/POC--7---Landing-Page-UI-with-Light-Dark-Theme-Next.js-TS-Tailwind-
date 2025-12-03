@@ -38,7 +38,7 @@ export default function TopBar() {
       {/* Right: Theme Toggle */}
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="p-2 rounded-lg border hover:bg-gray-200 dark:hover:bg-gray-700"
+        className="p-2 rounded-lg border hover:bg-gray-200 dark:hover:bg-gray-700 mt-2"
       >
         {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
       </button>
