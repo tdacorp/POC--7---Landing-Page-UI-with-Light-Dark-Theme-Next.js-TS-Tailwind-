@@ -1,66 +1,18 @@
 "use client";
 import { useState } from "react";
 
-// import { useCart } from "@/app/context/cart-context";
+import { useCart } from "../cart/cart-context";
 import Image from "next/image";
 
 import MenuFilter from "./menu-filter";
+import { menuItems } from "../data/menu-data"; 
+
  
 
 export default function MenuCards() {
-  // const { addToCart } = useCart();
+  const { addToCart } = useCart();
   
-  const [menuItems, setMenuItems] = useState([
-    {
-      id: 1,
-      name: "Crispy Tikki",
-      price: 9.99,
-      desc: "Made with eggs, lettuce, salt, oil and other ingredients.",
-      img: "/tikki.jpg",
-      category: "Breakfast" 
-    },
-    {
-      id: 2,
-      name: "Hawaiian Pizza",
-      price: 15.99,
-      desc: "Made with eggs, ruti, ada, salt, oil and other ingredients.",
-      img: "/pizza.jpeg",
-      category: "Breakfast" 
-    },
-    {
-      id: 3,
-      name: "Ice Cream",
-      price: 7.25,
-      desc: "Made with eggs, lettuce, salt, oil and other ingredients.",
-      img: "/ice.jpg",
-      category: "Desserts" 
-    },
-    {
-      id: 4,
-      name: "Spicy Vda",
-      price: 20.99,
-      desc: "Made with eggs, flour, salt, oil and other ingredients.",
-      img: "/pkode.jpeg",
-      category: "Breakfast" 
-    },
-    {
-      id: 5,
-      name: "Plain Dosa",
-      price: 20.99,
-      desc: "Made with eggs, flour, salt, oil and other ingredients.",
-      img: "/plain-Dosa.webp",
-      category: "Main Dishes" 
-    },
-    {
-      id: 6,
-      name: "Aperol and Apple Cider Cocktail",
-      price: 20.99,
-      desc: "Refresh Your Taste Buds.",
-      img: "/drink.jpeg",
-      category: "Drinks" 
-    },
-  ]);
-
+ 
   const [filteredItems, setFilteredItems] = useState(menuItems);
 
   const handleFilter = (category: string) => {
@@ -100,12 +52,14 @@ export default function MenuCards() {
             </div>
 
             {/* Content */}
-            <div className="p-4 text-center flex flex-col h-full">
-              <p className="text-red-600 font-bold text-lg">${item.price}</p>
+            <div className="p-4 text-center flex flex-col h-full" style={{ background: "var(--bg)", color: "var(--text)" }}>
+              <p className="text-red-600 font-bold text-lg">₹{item.price}</p>
               <h3 className="font-semibold text-xl mt-2">{item.name}</h3>
               <p className="text-gray-500 text-sm mt-1">{item.desc}</p>
+
+              {/* Add to Cart Button */}
               <button
-                // onClick={() => addToCart(item)}
+                onClick={() => addToCart(item)}
                 className="
                    
                  mt-2 border border-black text-black bg-white px-4 py-2 rounded-full hover:bg-red-600 transition w-full text-sm md:text-base
@@ -116,7 +70,7 @@ export default function MenuCards() {
 
              
             </div>
-             {/* Add to Cart Button */}
+             
               
           </div>
         ))}

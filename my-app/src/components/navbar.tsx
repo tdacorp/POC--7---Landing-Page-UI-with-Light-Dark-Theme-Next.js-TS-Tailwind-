@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center">
         <Image
-          src="/logo.png"  // ← replace with your image path
+          src="/image.png"  // ← replace with your image path
           alt="Bistro Bliss Logo"
           width={50}
           height={50}
@@ -32,6 +32,7 @@ export default function Navbar() {
         <Link href="/about">About</Link>
         <Link href="/menu">Menu</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/cart">Cart</Link>
       </div>
 
       {/* Book a Table Button */}

@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { CartProvider } from "./context/cart-context";
+import { CartProvider } from "./cart/cart-context";
 
 import TopBar from "../components/TopBar";
 import Navbar from "../components/navbar";
@@ -23,7 +23,7 @@ export default function RootLayout({
           <ThemeWrapper>
             <TopBar />
             <Navbar />
-            {children}
+           <CartProvider>{children}</CartProvider>
             <Footer />
           </ThemeWrapper>
         </CartProvider>
