@@ -55,7 +55,7 @@ export default function MenuCards() {
             <div className="p-4 text-center flex flex-col h-full" style={{ background: "var(--bg)", color: "var(--text)" }}>
               <p className="text-red-600 font-bold text-lg">₹{item.price}</p>
               <h3 className="font-semibold text-xl mt-2">{item.name}</h3>
-              <p className="text-gray-500 text-sm mt-1">{item.desc}</p>
+              <p className="text-gray-500 text-sm mt-1"style={{ background: "var(--bg)", color: "var(--text)" }}>{item.desc}</p>
 
               {/* Add to Cart Button */}
               <button
