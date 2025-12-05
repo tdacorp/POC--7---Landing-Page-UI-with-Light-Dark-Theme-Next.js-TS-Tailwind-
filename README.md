@@ -122,3 +122,32 @@ Features
 
 Tailwind supports dark mode via dark: classes
 
+### Added new features ###
+**Book A Table**
+
+Fields: Date, Time, Name, Phone, Total Person
+
+Validates all fields
+
+Saves data to Local Storage in JSON format
+
+Shows success notification
+
+Resets form after submission
+
+Fully responsive
+
+**Contact Us**
+
+Fields: Name, Email, Subject, Message
+
+Validates all fields
+
+Saves data to Local Storage
+
+Shows success notification
+
+Resets form after submission
+
+Fully responsive
+
