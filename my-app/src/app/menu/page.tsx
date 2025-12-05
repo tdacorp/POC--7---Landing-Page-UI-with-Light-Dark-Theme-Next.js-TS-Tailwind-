@@ -59,9 +59,8 @@ export default function MenuCards() {
 
               {/* Add to Cart Button */}
               <button
-                onClick={() => addToCart(item)}
+                onClick={() => {addToCart(item);  alert("Item added to cart!");}}
                 className="
-                   
                  mt-2 border border-black text-black bg-white px-4 py-2 rounded-full hover:bg-red-600 transition w-full text-sm md:text-base
                 "
               >

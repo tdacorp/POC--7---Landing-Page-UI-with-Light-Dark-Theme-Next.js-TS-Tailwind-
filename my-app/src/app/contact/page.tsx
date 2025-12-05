@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ContactPage() {
      const [success, setSuccess] = useState("");
@@ -11,6 +11,7 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  
 
   const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
