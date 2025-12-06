@@ -1,10 +1,10 @@
 import "./globals.css";
 
+import { CartProvider } from "./cart/cart-context";
+
+
 import TopBar from "../components/TopBar";
 import Navbar from "../components/navbar";
-import Hero from "../components/Hero";
-import MenuCards from "../components/MenuCards";
-import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
 import { ThemeProvider } from "next-themes";
@@ -20,21 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <ThemeProvider
-          attribute="class"     // <-- IMPORTANT: adds 'class="dark"' to <html>
-          defaultTheme="light"
-          enableSystem={false}
-        > */}
-        <ThemeWrapper>
-        <TopBar />
-        <Navbar />
-        <Hero />
-        <MenuCards />
-        <Testimonials />
-        <Footer />
-        {children}
-        {/* </ThemeProvider> */}
-        </ThemeWrapper>
+       <CartProvider>
+          <ThemeWrapper>
+            <TopBar />
+            <Navbar />
+           <CartProvider>{children}</CartProvider>
+            <Footer />
+          </ThemeWrapper>
+        </CartProvider>
       </body>
     </html>
   );

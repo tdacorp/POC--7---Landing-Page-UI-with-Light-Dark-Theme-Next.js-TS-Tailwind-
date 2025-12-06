@@ -9,7 +9,7 @@ export default function HeroSection() {
         src="/bg.jpg"
         alt="Background"
         fill
-        className="object-cover fixed -z-10"
+        className="object-cover fixed -z-10 pointer-events-none"
       />
 
       {/* Overlay */}
